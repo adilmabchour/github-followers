@@ -1,0 +1,15 @@
+<div class="row mt-4" *ngFor="let avatar of avatars">
+  <div class="col-md-2">
+    <img src="{{avatar.avatar_url}}" class="rounded-circle" style="width: 150px;"
+      alt="Avatar" />
+  </div>
+  <div class="col-md-3">
+    <h3>{{avatar.login}}</h3>
+    <a
+      [routerLink]="['/avatar', avatar.id, avatar.login ]"
+      [queryParams]="{page : 1, type : avatar.type, val : 'VAl' }"
+    >
+      {{avatar.url}}
+    </a>
+  </div>
+</div>

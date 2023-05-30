@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <ul class="list-group">
+        <li class="list-group-item">Title : {{course.titre}}</li>
+        <li class="list-group-item">Ratting : {{course.avis | number:'.2-2'}}</li>
+        <li class="list-group-item">Students : {{course.participants}}</li>
+        <li class="list-group-item">Price : {{course.prix | currency}}</li>
+        <li class="list-group-item">Release Date : {{course.publucationDate | date:'fullDate'}}</li>
+      </ul>
+    </div>
+    <div class="col-lg-6">
+        <i class="bi" [class.bi-star-fill]="isActive" [class.bi-star]="!isActive" (click)="changeIcon()"></i>
+    </div>
+  </div>
+</div>
